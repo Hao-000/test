@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script type="text/javascript">
+			onload=function(){
+				setInterval(show,3000);
+				function show(){
+					document.getElementById("im1");
+					setTimeout(hide,2000);
+				}
+				function hide(){
+					document.getElementById("im1").style.display="none";
+				}
+			}
+			
+		</script>-->
+	</head>
+	<body>
+		<img id="im1" src="img/3.png"/>4秒之后关闭广告
+		
+		<script type="text/javascript">
+			
+			setInterval(show,4000);
+			function show(){
+				//淡入
+				$("#im1").fadeIn(2000);
+				//下拉
+//				$("#im1").slideDown("slow");
+				setTimeout(hid,2000);
+			}
+			function hid(){
+				//淡出
+//				$("#im1").fadeOut(1000);
+				$("#im1").slideUp("slow");
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css"> 
+			#panel,#flip
+			{
+				padding:15px;
+				text-align:center;
+				background-color:#e5eecc;
+				border:solid 1px #c3c3c3;
+			}
+			#panel
+			{	
+				background-color: #AFEEEE;
+				padding:200px;
+				display:none;
+			}
+		</style>
+		
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		</script>
+			<script> 
+			$(function(){
+				
+			  $("#div1").mouseenter(function(){
+			    $("#panel").slideDown("slow");
+			  });
+			  
+				 $("#div1").mouseleave(function(){
+			    $("#panel").slideUp("slow");
+			  });
+			  
+			});
+		</script>
+	</head>
+	<body>
+		
+		 <div id="div1">
+			<div id="flip">鼠标移动到我身上，显示或隐藏面板。</div>
+			
+			<div id="panel">
+				Hello world!
+			</div>
+		</div>
+		
+	</body>
+</html>

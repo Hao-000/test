@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			
+			span{
+				margin-left: 10px;
+				color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form action="index.html" method="get" onsubmit="return login()">
+			
+			用户名：<input type="text" name="user" value="" id="user" /><span id="span_user"></span><br />
+			密码：<input type="password" name="user" value="" id="psw" /><span id="span_psw"></span><br />
+			<input type="submit" value="提交"/>
+			
+		</form>
+		
+		<script type="text/javascript">
+			function login(){
+			document.getElementById("user").onblur=function(){
+				var user=document.getElementById("user").value;
+				if(user==""){
+					document.getElementById("span_user").innerHTML="用户名不能为空";
+				}else{
+					user.display="none";
+					document.getElementById("span_user").innerHTML="";
+				}
+			}
+			
+			document.getElementById("psw").onblur=function(){
+				var psw = document.getElementById("psw").value;
+				if(psw==""){
+					document.getElementById("span_psw").innerHTML="密码不能为空";
+				}else{
+					document.getElementById("span_psw").innerHTML="";
+				}
+			}
+			}
+		</script>
+		
+		<script type="text/javascript">
+			$(function(){
+				/* 鼠标点击事件 */
+				$("#user").click(function(){
+					$(this).css("background-color","#eee");
+				})
+				$("#psw").click(function(){
+					$(this).css("background-color","#eee");
+				})
+				
+				/* 鼠标移动到元素事件 */
+				$("#psw").mouseenter(function(){
+					$("#psw").css("background-color","aqua");
+				})
+				$("#user").mouseleave(function(){
+					$("#user").css("background-color","#fff");
+				})
+				
+				/* 鼠标离开元素事件 */
+				$("#user").mouseenter(function(){
+					$("#user").css("background-color","aqua");
+				})
+				$("#psw").mouseleave(function(){
+					$("#psw").css("background-color","#fff");
+				})
+			});
+		</script>
+		
+	</body>
+</html>
